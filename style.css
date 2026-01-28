@@ -48,20 +48,20 @@
 }
 
 input {
-    flex:1;
-    border:none;
-    outline:none;
-    background:transparent;
-    padding:10px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
 
 }
 
 button {
-     border:none;
-    outline:none;
-    padding:16px 50px;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
     background: #ff5945;
-    color:#fff;
+    color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -73,20 +73,47 @@ ul li {
     font-size: 17px;
     padding: 12px 8px 12px 50px;
     user-select: none;
-    cursor:pointer;
+    cursor: pointer;
     position: relative;
 }
 
 ul li::before {
     content: "";
-    position:absolute;
+    position: absolute;
     height: 28px;
-    width:28px; 
+    width: 28px;
     border-radius: 50%;
     background-image: url(images/uncheck.png);
     background-size: cover;
     background-position: center;
     top: 12px;
     left: 8px;
+
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/tick\ icon.jpg);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
 
 }
